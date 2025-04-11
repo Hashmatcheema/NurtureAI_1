@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --secondary: #ec4899;
+  --danger: #ef4444;
+  --success: #10b981;
+  --background: #f3f4f6;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --border: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+#root {
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login & Signup Forms */
+.flex.flex-col.items-center.justify-center.h-screen.bg-gray-100 {
+  background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 100%);
+  padding: 1rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.text-3xl {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--card-bg);
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  max-width: 280px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.bg-blue-500 {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bg-blue-500:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bg-red-500 {
+  background-color: var(--danger);
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bg-red-500:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-blue-500 {
+  color: #4f46e5; /* Darker blue color */
+  background-color: rgba(255, 255, 255, 0.9); /* White background with opacity */
+  text-decoration: underline;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.text-blue-500:hover {
+  background-color: white;
+  color: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-red-500 {
+  color: #fecaca;
+  background-color: rgba(239, 68, 68, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* Welcome Page */
+.mb-4, .mb-6 {
+  margin-bottom: 0.75rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+  color: #000;
+}
+
+.mt-4 {
+  margin-top: 0.75rem;
+}
+
+.mt-6 {
+  margin-top: 1rem;
+}
+
+/* CryRecorder Component */
+.p-2 {
+  padding: 0.5rem;
+}
+
+.w-64 {
+  width: 100%;
+  max-width: 15rem;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Cry Recorder Specific Styling */
+.flex.flex-col.items-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--card-bg);
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* Record Button Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.bg-red-500 {
+  animation: pulse 2s infinite;
+}
+
+/* Cry History */
+.text-xl {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  max-height: 30vh;
+  overflow-y: auto;
+}
+
+li {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* Card Container for Welcome Page */
+.flex.flex-col.items-center.justify-center.h-screen.bg-gray-100 > * {
+  max-width: 450px;
+  width: 90%;
+}
+
+/* Category Result Display */
+.text-lg {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--primary);
+  background-color: rgba(99, 102, 241, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-top: 0.75rem;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+  .text-3xl {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .flex.flex-col.items-center {
+    padding: 1rem;
+    width: 90%;
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  .bg-blue-500,
+  .bg-red-500 {
+    max-width: 90%;
+  }
+  
+  .h-screen {
+    height: 100vh !important;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+  
+  ul {
+    max-height: 25vh;
+  }
+}
+
+/* Fix for mobile viewport issues */
+@media (max-height: 720px) {
+  .mb-4, .mb-6 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .mt-4 {
+    margin-top: 0.5rem;
+  }
+  
+  .mt-6 {
+    margin-top: 0.75rem;
+  }
+  
+  .text-3xl {
+    margin-bottom: 0.75rem;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bg-blue-500,
+  .bg-red-500 {
+    padding: 0.5rem 0.75rem;
+  }
+}
