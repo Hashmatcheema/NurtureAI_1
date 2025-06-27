@@ -1,6 +1,17 @@
 # Node modules
 node_modules/
 
+# Python virtual environment
+venv/
+
+# Audio/temp files
+*.mp3
+temp_/
+
+# React .env
+nurture-ai-web/.env
+
+
 # Logs
 logs
 *.log
